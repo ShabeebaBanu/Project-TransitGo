@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "Left-Form  Right-Image";
+  height: 100vh;
+}
+
+.Left-Form {
+  grid-area: Left-Form;
+  background-color: white;
+  padding: 2%;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 2fr 1fr;
+  grid-template-areas:
+    "logo"
+    "login-form-heading"
+    "login-form"
+    "signup";
+  gap: 0.4em;
+  padding: 3%;
+}
+
+.Right-Image {
+  grid-area: Right-Image;
+  background-color: #f1f3f6;
+  max-width: 100%;
+  
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.form-heading {
+  grid-area: form-heading;
+}
+
+.login-form {
+  grid-area: login-form;
+}
+
+.signup {
+  grid-area: signup;
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .App {
+    grid-template-columns: 1fr; /* Change layout to single column */
+  }
+  .Right-Image {
+    display: none;
+  }
+  .Left-Form {
+    width: 100vw;
+  }
+}

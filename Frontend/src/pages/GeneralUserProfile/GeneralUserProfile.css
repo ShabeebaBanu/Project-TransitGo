@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.general-user{
+    display: grid;
+    grid-template-columns:1fr 4fr;
+    grid-template-areas: 
+    "profilenavbar profilemain";
+    height: 100vh;
+    max-width: 100%;
+}
+
+.profilenavbar{
+    grid-area: profilenavbar;
+}
+
+.profilemain{
+    grid-area: profilemain;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas:
+    "profiletop"
+    "profilesubject";
+    gap: 2%;
+    padding: 3%;
+}
+
+.profiletop{
+    grid-area: profiletop;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-areas:
+    "profileicon profilenotification";
+}
+
+.profileicon{
+    grid-area: profileicon;
+}
+
+.profilenotification{
+    grid-area: profilenotification;
+    text-align: right;
+}
+
+.profilesubject{
+    grid-area: profilesubject;
+}
