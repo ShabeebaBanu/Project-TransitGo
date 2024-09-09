@@ -1,0 +1,59 @@
+.goal-item {
+  max-width: 80rem;
+  background: #9bedfd33;
+  color: hsl(224, 69%, 24%);
+  padding: 1rem 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.goal-item.user-post {
+  background: hsla(200, 100%, 80%, 0.348);
+  color: hsl(224, 69%, 24%);
+}
+
+.goal-item.admin-post {
+  background: hsl(200, 100%, 77%);
+  color: hsl(224, 69%, 24%);
+}
+.itemspace {
+  margin-bottom: 15px;
+}
+
+.deleteicon {
+  float: left;
+  margin-top: 10px;
+  padding: 4px;
+  padding-right: 15px;
+}
+.authordelay {
+  width: 15rem;
+  float: right;
+  background: hsl(0, 93%, 70%);
+  color: hsl(224, 69%, 24%);
+  margin-top: 14px;
+  padding: 4px;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+.authordelay.admin-post {
+  background: rgba(196, 3, 3, 0.878);
+  color: hsl(0, 0%, 100%);
+}
+.authordelay.user-post {
+  background: hsl(0, 93%, 70%);
+  color: hsl(224, 69%, 24%);
+}
+.tab {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .goal-item {
+    width: 100%;
+    margin-top: 5;
+  }
+  .tab {
+    width: 100%;
+  }
+}
