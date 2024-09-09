@@ -1,0 +1,40 @@
+package bugBust.transitgo.repository;
+
+import bugBust.transitgo.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    Optional<User> findByEmail(String email);
+
+    Optional<User> findByVerificationToken(String token);
+
+    boolean existsByEmail(String email);
+
+    void deleteById(Long id);
+
+    void deleteByEmail(String email);
+
+    void deleteByVerificationToken(String token);
+
+    Optional<User> findByBusid(String busId);
+
+
+    boolean existsByBusid(String busId);
+
+    @Query( "SELECT u FROM User u")
+   List<User> findAll();
+
+    List<User> findAllByEnabledFalseAndOtpTimestampBefore(LocalDateTime dateTime);
+
+    List<User> findAllByEnabledFalse();
+    List<User> findAllByOtpTimestampBefore(LocalDateTime dateTime);
+}
+
